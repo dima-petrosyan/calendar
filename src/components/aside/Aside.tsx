@@ -92,8 +92,9 @@ export const Aside: React.FC<AsideProps> = ({ isHide }) => {
     return (
         <List
             sx={(theme) => ({
-                // position: 'fixed',
-                // width: '280px',
+                // position: 'sticky',
+                // left: 0,
+                // top: 0,
                 flex: '0 0 280px', 
                 height: 'calc(100vh - 70px)',
                 transition: '0.3s ease all',

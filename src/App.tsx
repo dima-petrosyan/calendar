@@ -96,13 +96,13 @@ function App() {
 						...(isAsideHide && { ml: '-280px' }),
 
 						// - when modal is opened or task is edited, child components scroll to the top
-						height: 'calc(100vh - 70px)',
-						overflow: 'scroll',
+						// height: 'calc(100vh - 70px)',
+						// overflow: 'scroll',
 
 						// - no scroll to the top, but it's not current behavior
-						// height: 'auto',
-						// overflowY: 'unset',
-						// overflowX: 'scroll',
+						height: 'auto',
+						overflowY: 'unset',
+						overflowX: 'scroll',
 					}}>
 						<Outlet />
 					</Box>

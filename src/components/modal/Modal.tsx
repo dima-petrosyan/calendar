@@ -33,20 +33,6 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker'
 import { TimePicker } from '@mui/x-date-pickers/TimePicker'
 import { TimeValidationError } from '@mui/x-date-pickers/internals/hooks/validation/useTimeValidation'
 
-// - don't find in @mui/x-date-pickers this type
-// type TimeValidationError =
-//     "shouldDisableDate" | 
-//     "invalidDate" | 
-//     "disableFuture" | 
-//     "disablePast" | 
-//     "minDate" | 
-//     "maxDate" | 
-//     "minTime" | 
-//     "maxTime" | 
-//     "shouldDisableTime-hours" | 
-//     "shouldDisableTime-minutes" | 
-//     "shouldDisableTime-seconds" | null
-
 type CreateTaskModalProps = {
     isOpen: boolean
     handleOpen: (isOpen: boolean, task?: ITask | null) => void 

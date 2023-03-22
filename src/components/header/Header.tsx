@@ -119,11 +119,18 @@ export const Header: React.FC<HeaderProps> = ({ hideAside, isAsideHide, openModa
     const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
     return (
-        <Box sx={{ flexGrow: 1, }}>
+        <Box sx={{ 
+            flexGrow: 1, 
+            // position: 'sticky',
+            // top: 0,
+            // left: 0,
+            // zIndex: 10000,
+        }}>
       		<AppBar position='static' sx={(theme) => ({
                 boxShadow: theme.shadows[0],
                 height: '70px',
                 pt: 0.5,
+                
             })}>
         		<Toolbar>
           			<IconButton

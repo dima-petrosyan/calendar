@@ -45,6 +45,12 @@ export const Analytics: React.FC<AnalyticsProps> = (props) => {
 
     const { dayMatrix, weekMatrix, monthMatrix } = useCalendar(calendar.selectedDay, calendar.selectedWeek, false)
 
+    React.useLayoutEffect(() => {
+        if (!calendar.tasks.some(task => task.color.label === analytics.selectedColor?.label)) {
+            dispatch(setSelectedColor(null))
+        }
+    }, [calendar.tasks])
+
     // - convert tasks to object with key - color label, value - array of tasks with such color
     const splitTasksByColor = (tasks: ITask[]): JoinedObject<ITask> => {
         return joinByProperty<ITask>(tasks, 'color', 'label')
@@ -57,8 +63,8 @@ export const Analytics: React.FC<AnalyticsProps> = (props) => {
     }))
 
     const pointsFor = (arrOfTasks: ITask[], period: Dayjs[], filterValue: OpUnitType, formatValue: string): Datum[] => {
-        return period.map(date =>{
-            const tasks = arrOfTasks.filter(task => task.startDate.isSame(date, filterValue))
+        return period.map(date => {
+            const tasks = (arrOfTasks ?? []).filter(task => task.startDate.isSame(date, filterValue))
             return {
                 x: date.format(formatValue),
                 y: tasks.length,
