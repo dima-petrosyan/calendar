@@ -87,6 +87,7 @@ ul {
 	grid-template-areas: 'header header'
 						 'aside body';
 	overflow: hidden;
+	overflow-x: scroll;
 }
 
 /*.calendar::-webkit-scrollbar {

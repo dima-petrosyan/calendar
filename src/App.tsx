@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Aside } from './components/aside/Aside'
 import { Header } from './components/header/Header'
@@ -14,14 +14,12 @@ import { useTypedSelector, useTypedDispatch } from './hooks/redux'
 import { onAuthChanged } from './store/slices/auth.slice'
 import { ITask } from './types/types'
 
-import dayjs, { Dayjs } from 'dayjs'
 import Box from '@mui/material/Box'
 import { 
 	createTheme, 
 	colors, 
 	ThemeProvider, 
-	PaletteMode, 
-	experimental_sx as sx 
+	PaletteMode
 } from '@mui/material'
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom'
 
