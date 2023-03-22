@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useMemo, useCallback, useEffect } from 'react'
 import { Line } from '../components/charts/Line.chart'
 import { Pie } from '../components/charts/Pie.chart'

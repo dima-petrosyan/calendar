@@ -100,7 +100,7 @@ function App() {
 						// overflow: 'scroll',
 
 						// - no scroll to the top, but it's not current behavior
-						height: 'auto',
+						// height: 'auto',
 						overflowY: 'unset',
 						overflowX: 'scroll',
 					}}>

@@ -86,7 +86,7 @@ ul {
    	grid-template-columns: auto 1fr;
 	grid-template-areas: 'header header'
 						 'aside body';
-	/*overflow: unset;*/
+	overflow: hidden;
 }
 
 /*.calendar::-webkit-scrollbar {
@@ -103,6 +103,7 @@ ul {
 
 .calendar--month {
 	height: calc(100vh - 70px);
+	overflow: scroll;
 }
 
 .calendar__header {
@@ -244,7 +245,6 @@ ul {
 }
 
 .calendar__body {
-	height: 100%;
 	grid-area: body;
 	display: grid;
 }
